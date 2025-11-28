@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shakin S — UI/UX & Graphic Designer</title>
+  <meta name="description" content="Portfolio of Shakin S — Junior UI/UX & Graphic Designer available for freelance projects.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ---------- Color / Typography ---------- */
+    :root{
+      --bg: #0f1724; /* deep navy */
+      --card: #0b1220;
+      --muted: #ffffff;
+      --accent: #6ee7b7; /* soft mint */
+      --accent-2: #6b8cff; /* cool blue */
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+    }
+
+    html,body{height:100%;}
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, #071226 100%);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* ---------- Layout ---------- */
+    .navbar-custom{
+      background: linear-gradient(90deg, rgba(11,18,32,0.6), rgba(13,24,40,0.4));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .hero{
+      min-height: 82vh;
+      display:flex;
+      align-items:center;
+      padding-top:3rem;
+      padding-bottom:3rem;
+    }
+
+    .profile-photo{
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(7,18,34,0.7);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .hero-card{
+      background: linear-gradient(180deg,var(--glass), var(--glass-2));
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+    }
+
+    h1.display-5{letter-spacing:-0.5px;}
+    .lead-muted{color:var(--muted);}
+
+    /* ---------- Portfolio ---------- */
+    .project-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+    .project-card:hover{transform: translateY(-6px); box-shadow: 0 18px 40px rgba(6,12,30,0.55);}
+
+    .project-thumb{width:100%; height:190px; object-fit:cover; display:block}
+
+    /* ---------- Skills ---------- */
+    .skill-name{font-weight:600;}
+    .progress{height:10px; background:rgba(255,255,255,0.03); border-radius:10px}
+    .progress-bar{background:linear-gradient(90deg,var(--accent), var(--accent-2));}
+
+    /* ---------- Services ---------- */
+    .service-icon{
+      width:64px; height:64px; display:inline-grid; place-items:center; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03); font-weight:700;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:1.25rem; border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    /* ---------- Footer ---------- */
+    footer{color:var(--muted); padding:2rem 0}
+
+    /* Responsive tweaks */
+    @media (max-width: 767px){
+      .hero{padding-top:1.75rem;padding-bottom:1.75rem}
+      .profile-photo{max-width:260px}
+    }
+    /* Force all muted/grey text to white */
+.text-muted, 
+.small.text-muted {
+  color: #ffffff !important;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Shakin S</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link">Work</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#contact" class="btn btn-sm btn-outline-light ms-lg-3">Hire me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO / LANDING -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <div class="hero-card">
+            <p class="text-uppercase text-muted small mb-2">Junior UI/UX & Graphic Designer</p>
+            <h1 class="display-5 mb-3">I design clean, user-first interfaces & visual branding for startups and small businesses.</h1>
+            <p class="lead lead-muted mb-4">Hi — I'm Shakin, a junior designer with a strong foundation in UI/UX principles, visual identity, and pixel-perfect layouts. I help early-stage products and creative businesses improve usability and look great.</p>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#contact" class="btn btn-lg btn-primary me-2">Hire me</a>
+              <a href="#portfolio" class="btn btn-lg btn-outline-light">View work</a>
+            </div>
+
+            <ul class="list-inline mt-4 mb-0 small text-muted">
+              <li class="list-inline-item">Available for freelance</li>
+              <li class="list-inline-item">•</li>
+               <li class="list-inline-item">Location: INDIA, Tamil Nadu</li>
+              <li class="list-inline-item">•</li>
+              <li class="list-inline-item">Figma, Adobe XD, Illustrator</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex justify-content-center order-1 order-lg-2">
+          <!-- Replace ./assets/profile.jpg with your professional photo (landscape or portrait crop) -->
+          <img src="./Images/Me11.jpg" alt="Shakin S — profile photo" class="profile-photo">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-7">
+          <h2 class="h3">About</h2>
+          <p class="text-muted">I build intuitive, accessible interfaces and brand assets with attention to user needs and business goals. My process combines research, wireframing, prototyping, and a keen eye for visual detail. Though early in my career, I've completed several client and personal projects covering mobile and web interfaces, branding, and marketing assets.</p>
+
+          <div class="row mt-4">
+            <div class="col-sm-6">
+              <ul class="list-unstyled small text-muted">
+                <li><strong>Location:</strong> India</li>
+                <li><strong>Experience:</strong> Junior / Fresher</li>
+                <li><strong>Tools:</strong> Figma, Adobe Illustrator, Photoshop</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-unstyled small text-muted">
+                <li><strong>Availability:</strong> Freelance — part-time</li>
+                <li><strong>Languages:</strong> English, Tamil</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="contact-card">
+            <h5 class="mb-2">Quick intro</h5>
+            <p class="small text-muted mb-3">Need a clean UI, branding refresh, or marketing graphics? Tell me about your project and I'll share a tailored plan, timeline and a friendly quote.</p>
+            <a href="#contact" class="btn btn-outline-light w-100">Start a conversation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / PROJECTS -->
+  <section id="portfolio" class="py-5 bg-transparent">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h2 class="h3 mb-0">Selected Work</h2>
+        <p class="mb-0 small text-muted">Case studies & visual work — entry to mid-level projects.</p>
+      </div>
+
+      <div class="row g-3">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalProject1">
+              <img src="./Images/mobile app.png" alt="Project 1 — Mobile app design" class="project-thumb">
+            </a>
+            <div class="p-3">
+              <h5 class="mb-1">Mobile app model</h5>
+              <p class="small text-muted mb-2">A simple task manager UI focused on quick entry and delightful micro-interactions.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Figma • Mobile</small>
+                <a href="#" class="stretched-link text-decoration-none">View case</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalProject2">
+              <img src="./Images/bloom.jpg" alt="Project 2 — Branding" class="project-thumb">
+            </a>
+            <div class="p-3">
+              <h5 class="mb-1">Branding</h5>
+              <p class="small text-muted mb-2">Brand identity and marketing.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Illustrator • Branding</small>
+                <a href="#" class="stretched-link text-decoration-none">View case</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalProject3">
+              <img src="./Images/FB login.png" alt="Project 3 — Landing page" class="project-thumb">
+            </a>
+            <div class="p-3">
+              <h5 class="mb-1">Web Page model</h5>
+              <p class="small text-muted mb-2">High-conversion landing layout with clear hierarchy and trust signals.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Figma • Web</small>
+                <a href="#" class="stretched-link text-decoration-none">View case</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- More placeholder projects to show depth -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="./Images/coffee-social-media-post-design_686979-161.avif" alt="Project 4 — Social post pack" class="project-thumb">
+            <div class="p-3">
+              <h5 class="mb-1">Social Pack — Cafe</h5>
+              <p class="small text-muted mb-2">Brand-aligned social media graphics for a local cafe launch.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Illustrator • Graphics</small>
+                <a href="#" class="stretched-link text-decoration-none">View</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="./Images/landing figma.png" alt="Project 5 — Dashboard design" class="project-thumb">
+            <div class="p-3">
+              <h5 class="mb-1">Analytics Dashboard</h5>
+              <p class="small text-muted mb-2">Clean data presentation with approachable charts and filters.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Figma • Dashboard</small>
+                <a href="#" class="stretched-link text-decoration-none">View</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="./Images/Food poster.jpg" alt="Project 6 — Poster design" class="project-thumb">
+            <div class="p-3">
+              <h5 class="mb-1">Poster</h5>
+              <p class="small text-muted mb-2">Bold poster layout and typography for events.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Photoshop • Poster</small>
+                <a href="#" class="stretched-link text-decoration-none">View</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="#contact" class="btn btn-outline-light">Discuss a project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for quick previews (replace with real case study links) -->
+  <div class="modal fade" id="modalProject1" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="./assets/project1.jpg" class="w-100 rounded" alt="Project 1 preview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalProject2" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="./assets/project2.jpg" class="w-100 rounded" alt="Project 2 preview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalProject3" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="./assets/project3.jpg" class="w-100 rounded" alt="Project 3 preview">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="h3">Skills</h2>
+          <p class="text-muted">Tools and skills I use to design and deliver projects.</p>
+
+          <div class="mt-3">
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-name">UI Design</div>
+                <div class="small text-muted">80%</div>
+              </div>
+              <div class="progress"><div class="progress-bar" role="progressbar" style="width:80%"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-name">User Research & Wireframing</div>
+                <div class="small text-muted">70%</div>
+              </div>
+              <div class="progress"><div class="progress-bar" role="progressbar" style="width:70%"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-name">Graphic Design</div>
+                <div class="small text-muted">75%</div>
+              </div>
+              <div class="progress"><div class="progress-bar" role="progressbar" style="width:75%"></div></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-name">Prototyping (Figma)</div>
+                <div class="small text-muted">78%</div>
+              </div>
+              <div class="progress"><div class="progress-bar" role="progressbar" style="width:78%"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="h3">Tools</h2>
+          <div class="row g-3 mt-2">
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="service-icon">F</div>
+              <div class="small text-muted mt-2">Figma</div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="service-icon">Ai</div>
+              <div class="small text-muted mt-2">Illustrator</div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="service-icon">Ps</div>
+              <div class="small text-muted mt-2">Photoshop</div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="service-icon">Xd</div>
+              <div class="small text-muted mt-2">Adobe XD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-5 bg-transparent">
+    <div class="container">
+      <div class="row align-items-center mb-4">
+        <div class="col-md-8">
+          <h2 class="h3 mb-0">Services</h2>
+          <p class="small text-muted">What I offer — focused, practical packages for startups and small businesses.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="#contact" class="btn btn-outline-light">Get a quote</a>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="project-card p-3 h-100">
+            <div class="d-flex align-items-start gap-3">
+              <div class="service-icon">UI</div>
+              <div>
+                <h6 class="mb-1">UI Design</h6>
+                <p class="small text-muted mb-0">Designing pixel-perfect screens, responsive layouts and design systems for web & mobile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card p-3 h-100">
+            <div class="d-flex align-items-start gap-3">
+              <div class="service-icon">UX</div>
+              <div>
+                <h6 class="mb-1">UX & Research</h6>
+                <p class="small text-muted mb-0">User flows, wireframes, usability testing (basic), and prototype-driven design iterations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card p-3 h-100">
+            <div class="d-flex align-items-start gap-3">
+              <div class="service-icon">BD</div>
+              <div>
+                <h6 class="mb-1">Branding & Graphics</h6>
+                <p class="small text-muted mb-0">Logo design, identity systems, posters and social media visuals for campaigns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="h3">Let's work together</h2>
+          <p class="text-muted">Ready to start? Share the basics and I'll reply with availability and a fee estimate.</p>
+
+          <div class="contact-card mt-3">
+            <!-- Contact form uses JavaScript to open an email draft with the details. -->
+            <form id="contactForm" onsubmit="return sendMail(event)">
+              <div class="mb-3">
+                <label class="form-label small">Your name</label>
+                <input required class="form-control" id="c_name" placeholder="e.g. John">
+              </div>
+              <div class="mb-3">
+                <label class="form-label small">Email</label>
+                <input required type="email" class="form-control" id="c_email" placeholder="you@gmail.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label small">Project brief</label>
+                <textarea required class="form-control" id="c_msg" rows="4" placeholder="A short description of your project, timeline and budget (if any)"></textarea>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary" type="submit">Send message</button>
+                <a href="mailto:sshakin06@gmail.com" class="btn btn-outline-light">Email directly</a>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="h3 d-none d-lg-block">Availability & Rates</h2>
+          <p class="small text-muted">I take on small-to-medium projects: landing pages, mobile apps, branding packages. Typical timeline: 1–4 weeks depending on scope.</p>
+
+          <ul class="list-unstyled small text-muted mt-3">
+            <li><strong>Hourly:</strong> ₹400–₹1,000 (depends on scope)</li>
+            <li><strong>Small project price:</strong> Depends on the Project</li>
+            <li><strong>Tools:</strong> Figma, Adobe Suite</li>
+          </ul>
+
+          <div class="mt-3">
+            <a href="#portfolio" class="btn btn-outline-light">See work</a>
+            <a href="#contact" class="btn btn-primary ms-2">Start chat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-1 small">© <span id="year"></span> Shakin S — UI/UX & Graphic Designer</p>
+    <p class="small">Made with attention to detail. Available for freelance projects.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Contact form: open mail client with prefilled content (simple approach for a freelancer site)
+  function sendMail(e){
+    e.preventDefault();
+    var name = document.getElementById('c_name').value.trim();
+    var email = document.getElementById('c_email').value.trim();
+    var msg = document.getElementById('c_msg').value.trim();
+
+    var subject = encodeURIComponent('Freelance inquiry from ' + name);
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nProject brief:\n' + msg);
+
+    var mailto = 'mailto:sshakin06@gmail.com?subject=' + subject + '&body=' + body;
+    window.location.href = mailto;
+    return false;
+  }
+</script>
+
+</body>
+</html>
